@@ -4,9 +4,10 @@ import os
 
 
 class ServiceBase:
-    def run_action(self, action, *args):
+    def run_action(self, action):
         if action.lower() == "get_all":
             return self.get_all()
+        return None
 
     def get_all(self):
         pass
@@ -22,3 +23,4 @@ def get_service_by_name(name):
         object = getattr(module, attr)
         if inspect.isclass(object) and issubclass(object, ServiceBase):
             return object()
+    return None
