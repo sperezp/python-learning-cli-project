@@ -11,4 +11,4 @@ jobs:
             sudo pip install -r requirements.txt
             sudo pip install pylint
             cd ..
-            pylint python-learning-cli-project --ignore=venv
+            pylint python-learning-cli-project --ignore=venv --rcfile=python-learning-cli-project/.pylintrc
