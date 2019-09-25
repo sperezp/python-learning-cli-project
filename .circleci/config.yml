@@ -10,5 +10,6 @@ jobs:
           command: |  # use pipenv to install dependencies
             sudo pip install -r requirements.txt
             sudo pip install pylint
+            pytest
             cd ..
             pylint python-learning-cli-project --ignore=venv --rcfile=python-learning-cli-project/.pylintrc
